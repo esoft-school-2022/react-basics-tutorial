@@ -18,6 +18,7 @@ class SquareClass extends React.Component{
 
     handleOnAndOff = () => {
         this.setState(prevState => ({
+            ...prevState,
             on: !prevState.on,
             styles: {backgroundColor: this.state.on ? 'white' : 'red'}
         }))
