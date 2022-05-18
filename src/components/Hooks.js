@@ -13,7 +13,7 @@ function Hooks() {
         <div>
             <input value={name} onChange={(e) => setName(e.target.value)}></input>
             <div>My name is {name}</div>
-            <div>Last name was: {prevName.current}</div>
+            <div>My name was: {prevName.current}</div>
         </div>
     )
 }

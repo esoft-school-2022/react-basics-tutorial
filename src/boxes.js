@@ -1,38 +1,49 @@
-export default [
+const boxes = [
     {
         id: 1,
-        on: true
+        on: true,
+        name: 'Muhammed Hendrix'
     },
     {
         id: 2,
-        on: false
+        on: false,
+        name: 'Johanna Mcknight'
     },
     {
         id: 3,
-        on: false
+        on: false,
+        name: 'Selin Bush'
     },
     {
         id: 4,
-        on: true
+        on: true,
+        name: 'Lexi-Mae Mendez'
     },
     {
         id: 5,
-        on: true
+        on: true,
+        name: 'Allana Deacon'
     },
     {
         id: 6,
-        on: false
+        on: false,
+        name: 'Harris Jackson'
     },
     {
         id: 7,
-        on: false
+        on: false,
+        name: 'Lizzie Thornton'
     },
     {
         id: 8,
-        on: true
+        on: true,
+        name: 'Zaki Hawes'
     },
     {
         id: 9,
-        on: false
+        on: false,
+        name: 'Charles Norman'
     },
 ];
+
+export default boxes;

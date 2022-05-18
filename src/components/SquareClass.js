@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default class SquareClass extends React.Component{
+class SquareClass extends React.Component{
     constructor(props) {
         super(props);
 
@@ -16,18 +16,11 @@ export default class SquareClass extends React.Component{
         };
     }
 
-    changeStyles = () => {
-        this.setState({
-            ...this.state.on,
-            styles: {
-                backgroundColor: this.state.on ? 'white' : 'red'
-            }
-        })
-    }
-
     handleOnAndOff = () => {
-        this.setState(prevState => ({on: !prevState.on}))
-        this.changeStyles();
+        this.setState(prevState => ({
+            on: !prevState.on,
+            styles: {backgroundColor: this.state.on ? 'white' : 'red'}
+        }))
     }
 
     render() {
@@ -40,3 +33,5 @@ export default class SquareClass extends React.Component{
         )
     }
 }
+
+export default SquareClass;

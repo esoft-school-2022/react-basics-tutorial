@@ -71,3 +71,8 @@ main {
     border: 1px solid black;
     margin: 10px;
 }
+
+.changeButtons {
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
