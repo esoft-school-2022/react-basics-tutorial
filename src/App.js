@@ -3,7 +3,7 @@ import Square from './components/Square'
 import boxes from './boxes'
 import SquareClass from "./components/SquareClass";
 import Hooks from './components/Hooks';
-import Index from './components';
+import Index from './components/Index';
 
 export default function App() {
 
