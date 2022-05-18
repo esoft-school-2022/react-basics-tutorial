@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Hooks from './Hooks';
 import SquareClass from './SquareClass';
 import Square from './Square';
+import TicTacField from './TicTacField';
 
 class Index extends Component {
     render() {
@@ -33,6 +34,11 @@ class Index extends Component {
                             <Square key={box.id} box={box} />
                             )
                         })
+                    )
+                }
+                {
+                    component === 'ticTacField' && (
+                        <TicTacField />
                     )
                 }
             </div>

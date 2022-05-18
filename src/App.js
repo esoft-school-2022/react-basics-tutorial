@@ -19,6 +19,7 @@ export default function App() {
           <button value='hooks' onClick={(e) => setNewComponent(e.target.value)}>Hooks</button>
           <button value='square' onClick={(e) => setNewComponent(e.target.value)}>Square</button>
           <button value='squareClass' onClick={(e) => setNewComponent(e.target.value)}>SquareClass</button>
+          <button value='ticTacField' onClick={(e) => setNewComponent(e.target.value)}>Tic Tac Toe</button>
         </div>
         <Index component={component} boxes={boxes}/>
     </div>
