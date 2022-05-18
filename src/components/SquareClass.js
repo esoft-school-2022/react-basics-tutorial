@@ -16,30 +16,6 @@ export default class SquareClass extends React.Component{
         };
     }
 
-    componentDidMount() {
-        setTimeout(() => {
-            this.setState({
-                ...this.state,
-                styles: {
-                    backgroundColor: 'yellow'
-                }
-            });
-        },3000);
-    }
-
-    componentDidUpdate(prevProps, prevState, snapshot) {
-        if (prevState.on !== this.state.on) {
-            setTimeout(() => {
-                this.setState({
-                    ...this.state,
-                    styles: {
-                        backgroundColor: 'blue'
-                    }
-                });
-            },3000);
-        }
-    }
-
     changeStyles = () => {
         this.setState({
             ...this.state.on,
