@@ -4,10 +4,9 @@ import boxes from './boxes';
 const BoxContext = createContext();
 
 const BoxProvider = (props) => {
-    const [boxesAll, setBoxes] = useState(boxes);
 
     return (
-        <BoxContext.Provider value={'Hello'}>
+        <BoxContext.Provider value={boxes}>
             {props.children}
         </BoxContext.Provider>
     )

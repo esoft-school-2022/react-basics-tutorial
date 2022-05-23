@@ -4,6 +4,7 @@ import SquareClass from './SquareClass';
 import Square from './Square';
 import BoxList from './BoxList';
 import {BoxProvider} from "../BoxContext";
+import ComponentOne from "./ComponentOne";
 
 
 class Index extends Component {
@@ -40,9 +41,7 @@ class Index extends Component {
                 }
                 {
                     component === 'boxes' && (
-                        <BoxProvider>
-                            <BoxList />
-                        </BoxProvider>
+                        <ComponentOne />
                     )
                 }
             </div>
