@@ -1,8 +1,5 @@
 import React, { useState } from 'react';
-import Square from './components/Square'
-import boxes from './boxes'
-import SquareClass from "./components/SquareClass";
-import Hooks from './components/Hooks';
+import boxes from './boxes';
 import Index from './components/Index';
 
 export default function App() {
@@ -19,6 +16,7 @@ export default function App() {
           <button value='hooks' onClick={(e) => setNewComponent(e.target.value)}>Hooks</button>
           <button value='square' onClick={(e) => setNewComponent(e.target.value)}>Square</button>
           <button value='squareClass' onClick={(e) => setNewComponent(e.target.value)}>SquareClass</button>
+          <button value='boxes' onClick={(e) => setNewComponent(e.target.value)}>Boxes</button>
         </div>
         <Index component={component} boxes={boxes}/>
     </div>

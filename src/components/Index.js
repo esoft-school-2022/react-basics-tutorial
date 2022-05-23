@@ -2,6 +2,9 @@ import React, { Component } from 'react';
 import Hooks from './Hooks';
 import SquareClass from './SquareClass';
 import Square from './Square';
+import BoxList from './BoxList';
+import {BoxProvider} from "../BoxContext";
+
 
 class Index extends Component {
     render() {
@@ -33,6 +36,13 @@ class Index extends Component {
                             <Square key={box.id} box={box} />
                             )
                         })
+                    )
+                }
+                {
+                    component === 'boxes' && (
+                        <BoxProvider>
+                            <BoxList />
+                        </BoxProvider>
                     )
                 }
             </div>
