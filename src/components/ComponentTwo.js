@@ -6,11 +6,9 @@ class ComponentTwo extends Component {
 
     render() {
         return (
-            <BoxProvider>
-                <div>
-                    <ComponentThree />
-                </div>
-            </BoxProvider>
+           <div>
+               <ComponentThree />
+           </div>
         );
     }
 }
