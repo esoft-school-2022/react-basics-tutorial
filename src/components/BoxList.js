@@ -1,6 +1,6 @@
 import React, {useContext} from 'react';
 import {BoxContext, BoxProvider} from '../BoxContext';
-import Square from "./Square";
+import Square from './Square';
 
 const BoxList = () => {
     const value = useContext(BoxContext);

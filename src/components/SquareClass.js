@@ -14,6 +14,16 @@ class SquareClass extends React.Component{
                 backgroundColor: 'white'
             }
         };
+        console.log('constructor');
+    }
+
+    componentDidUpdate(prevProps, prevState, snapshot) {
+        setTimeout(() => {
+            this.setState(prevState => ({
+                ...prevState,
+                styles: {backgroundColor: 'yellow'}
+            }));
+        }, 1000);
     }
 
     handleOnAndOff = () => {
@@ -25,6 +35,7 @@ class SquareClass extends React.Component{
     }
 
     render() {
+        console.log('render');
         return (
             <div
                 onClick={this.handleOnAndOff}
