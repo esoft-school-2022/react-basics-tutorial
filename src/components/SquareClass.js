@@ -23,7 +23,7 @@ class SquareClass extends React.Component{
                 ...prevState,
                 styles: {backgroundColor: 'yellow'}
             }));
-        }, 1000);
+        }, 3000);
     }
 
     handleOnAndOff = () => {

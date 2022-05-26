@@ -1,5 +1,5 @@
 import React, {useContext} from 'react';
-import {BoxContext, BoxProvider} from '../BoxContext';
+import {BoxContext} from '../BoxContext';
 import Square from './Square';
 
 const BoxList = () => {

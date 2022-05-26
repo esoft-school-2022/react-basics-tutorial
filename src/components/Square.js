@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef, useState} from 'react';
 
 export default function Square(props) {
     const {
@@ -16,9 +16,9 @@ export default function Square(props) {
     }
 
     return (
-        <div 
+        <div
             onClick={handleOnAndOff}
-            className='box' 
+            className='box'
             style={styles}>
         </div>
     )
