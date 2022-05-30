@@ -6,13 +6,34 @@
     "@testing-library/jest-dom": "^5.16.4",
     "@testing-library/react": "^13.1.1",
     "@testing-library/user-event": "^13.5.0",
+    "@types/socket.io": "^3.0.2",
     "antd": "^4.1.2",
     "http": "0.0.1-security",
+    "mobx-utils": "^6.0.5",
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
     "react-scripts": "5.0.1",
     "web-vitals": "^2.1.4",
     "websocket": "^1.0.31"
+  },
+  "devDependencies": {
+    "@babel/plugin-proposal-decorators": "^7.2.3",
+    "mobx": "^5.8.0",
+    "mobx-react": "^5.4.3",
+    "mobx-react-devtools": "^6.0.3"
+  },
+  "babel": {
+    "presets": [
+      "react-app"
+    ],
+    "plugins": [
+      [
+        "@babel/plugin-proposal-decorators",
+        {
+          "legacy": true
+        }
+      ]
+    ]
   },
   "scripts": {
     "start": "PORT=1992 react-scripts start",

@@ -9,7 +9,7 @@ const { Meta } = Card;
 
 const client = new W3CWebSocket('ws://127.0.0.1:8000');
 
-class Chat extends Component {
+class ChatState extends Component {
     constructor(props) {
         super(props);
     }
@@ -28,6 +28,7 @@ class Chat extends Component {
         }));
         this.setState({ searchVal: '' })
     }
+
     componentDidMount() {
         client.onopen = () => {
             console.log('WebSocket Client Connected');
@@ -51,23 +52,26 @@ class Chat extends Component {
     render() {
         return (
             <div className="main" id='wrapper'>
+                <h1>Chat using State</h1>
                 {this.state.isLoggedIn ?
                     <div>
                         <div className="title">
                             <Text id="main-heading" type="secondary" style={{ fontSize: '36px' }}>Websocket Chat: {this.state.userName}</Text>
                         </div>
                         <div style={{ display: 'flex', flexDirection: 'column', paddingBottom: 50 }} id="messages">
-                            {this.state.messages.map(message =>
-                                <Card key={message.msg} style={{ width: 300, margin: '16px 4px 0 4px', alignSelf: this.state.userName === message.user ? 'flex-end' : 'flex-start' }} loading={false}>
-                                    <Meta
-                                        avatar={
-                                            <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>{message.user[0].toUpperCase()}</Avatar>
-                                        }
-                                        title={message.user+":"}
-                                        description={message.msg}
-                                    />
-                                </Card>
-                            )}
+                            {
+                                this.state.messages.map(message =>
+                                    <Card key={message.msg} style={{ width: 300, margin: '16px 4px 0 4px', alignSelf: this.state.userName === message.user ? 'flex-end' : 'flex-start' }} loading={false}>
+                                        <Meta
+                                            avatar={
+                                                <Avatar style={{ color: '#f56a00', backgroundColor: '#fde3cf' }}>{message.user[0].toUpperCase()}</Avatar>
+                                            }
+                                            title={message.user+":"}
+                                            description={message.msg}
+                                        />
+                                    </Card>
+                                )
+                            }
                         </div>
                         <div className="bottom">
                             <Search
@@ -95,4 +99,4 @@ class Chat extends Component {
     }
 }
 
-export default Chat;
+export default ChatState;

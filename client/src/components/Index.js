@@ -2,8 +2,10 @@ import React, { Component } from 'react';
 import Hooks from './Hooks';
 import SquareClass from './SquareClass';
 import Square from './Square';
-import Chat from './Chat';
+import ChatState from './ChatState';
 import ComponentOne from "./ComponentOne";
+import ChatMobx from "./ChatMobx";
+import { observer } from 'mobx-react';
 
 
 class Index extends Component {
@@ -44,8 +46,13 @@ class Index extends Component {
                     )
                 }
                 {
-                    component === 'chat' && (
-                        <Chat />
+                    component === 'chatState' && (
+                        <ChatState />
+                    )
+                }
+                {
+                    component === 'chatMobx' && (
+                        <ChatMobx />
                     )
                 }
             </div>
@@ -53,4 +60,4 @@ class Index extends Component {
     }
 }
 
-export default Index;
+export default observer(Index);
