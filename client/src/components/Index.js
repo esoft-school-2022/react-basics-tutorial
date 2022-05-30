@@ -2,8 +2,7 @@ import React, { Component } from 'react';
 import Hooks from './Hooks';
 import SquareClass from './SquareClass';
 import Square from './Square';
-import BoxList from './BoxList';
-import {BoxProvider} from "../BoxContext";
+import Chat from './Chat';
 import ComponentOne from "./ComponentOne";
 
 
@@ -42,6 +41,11 @@ class Index extends Component {
                 {
                     component === 'boxes' && (
                         <ComponentOne />
+                    )
+                }
+                {
+                    component === 'chat' && (
+                        <Chat />
                     )
                 }
             </div>
