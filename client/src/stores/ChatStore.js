@@ -1,9 +1,4 @@
-import {
-    action,
-    computed,
-    decorate,
-    observable
-} from 'mobx';
+import {action, computed, decorate, observable} from 'mobx';
 import { getUniqueID } from '../utils/utils';
 import { w3cwebsocket as W3CWebSocket } from 'websocket';
 
@@ -16,7 +11,6 @@ class ChatStore {
 
     constructor() {
         this.client = new W3CWebSocket('ws://127.0.0.1:8000');
-
         this.client.onmessage = (message) => {
             const dataFromServer = JSON.parse(message.data);
             this.setMessages(dataFromServer);
@@ -37,11 +31,7 @@ class ChatStore {
     }
 
     setMessages = (message) => {
-        this.messages.push({
-            id: getUniqueID,
-            user: message.user,
-            msg: message.msg
-        })
+        this.messages.push({id: getUniqueID, user: message.user, msg: message.msg})
     }
 
     sendMessage() {
@@ -52,10 +42,6 @@ class ChatStore {
         }));
 
         this.clearInput();
-    }
-
-    get allMessages() {
-        return this.messages;
     }
 }
 

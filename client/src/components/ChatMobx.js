@@ -7,7 +7,7 @@ const { Search } = Input;
 const { Text } = Typography;
 const { Meta } = Card;
 
-class ChatState extends Component {
+class ChatMobx extends Component {
     constructor(props) {
         super(props);
     }
@@ -69,4 +69,4 @@ class ChatState extends Component {
     }
 }
 
-export default observer(ChatState);
+export default observer(ChatMobx);
